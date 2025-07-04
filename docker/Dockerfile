@@ -162,14 +162,14 @@ CMD ["php", "artisan", "queue:work"]
 # Application dev stage
 FROM base AS app-dev
 ENTRYPOINT ["docker-php-entrypoint"]
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=3000"]
 
 # Application release stage
 FROM base AS app-release
 ENTRYPOINT ["docker-php-entrypoint"]
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=3000"]
 
 # Application stage
 FROM base AS app
 ENTRYPOINT ["docker-php-entrypoint"]
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=3000"]
